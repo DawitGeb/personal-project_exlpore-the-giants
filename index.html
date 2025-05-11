@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's Tallest Buildings Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1><strong>Explore the Giants</strong></h1>
+            <p>Discover, compare, and learn about the planet's most impressive skyscrapers.</p>
+        </div>
+    </header>
+
+    <nav class="fixed-nav">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#map-section">MAP</a></li>
+            <li><a href="#comparison-section">COMPARE</a></li>
+            <li><a href="#top10-lists-section">TOP 10</a></li>
+            <li><a href="#" id="contact-link">CONTACT US</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="darkModeToggle">
+            <label class="slider" for="darkModeToggle"></label>
+        </div>
+    </nav>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p><strong>Name:</strong> Dawit Teum Gebru</p>
+                <p><strong>Email:</strong> <a href="mailto:dawitteumg@gmail.com">dawitteumg@gmail.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/DawitGeb" target="_blank">DawitGeb</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dawit-gebru" target="_blank">Dawit Teum Gebru</a></p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="map-section">
+            <h2>Global Skyscraper Map</h2>
+            <div id="filter-controls" class="dropdown-container">
+                <div class="dropdown">
+                    <button class="filter-dropdown-button">Filter By</button>
+                    <div class="dropdown-content">
+                        <button class="filter-button" data-filter="country">Country</button>
+                        <button class="filter-button" data-filter="min-floors">Min Floors</button>
+                        <button class="filter-button" data-filter="completion-year">Year Built</button>
+                        <button class="filter-button" data-filter="function">Function</button>
+                    </div>
+                </div>
+                <div id="filter-options"></div>                
+            </div>
+            <div id="map"></div>
+        </section>
+
+        <section id="comparison-section">
+            <h2>Compare Buildings</h2>
+            <div id="comparison-controls">
+                <select id="building1"><option value="">Select Building 1</option></select>
+                <select id="building2"><option value="">Select Building 2</option></select>
+                <button id="compare-button">Compare</button>
+            </div>
+            <div id="comparison-chart-container">
+                <canvas id="comparison-chart"></canvas>
+            </div>
+            <div id="comparison-details"></div>
+        </section>
+
+        <section id="top10-lists-section">
+            <h2>Top 10 Tallest Buildings</h2>
+            <ol id="top-10-list"></ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Skyscraper Explorer</p>
+    </footer>
+</body>
+</html>
