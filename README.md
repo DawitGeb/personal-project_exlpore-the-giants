@@ -1,6 +1,4 @@
-
-# Architectural Data Explorer 🏙️
-
+![](Architectural-data_github-banner.png)
 **Architectural Data Explorer** is a personal project that combines my background in architecture with my growing skills in data analytics and web development. This project collects, cleans, and visualizes data on the world’s tallest skyscrapers to provide insights into global high-rise architecture trends.
 
 Built using JavaScript, HTML, and CSS, it features a user-friendly interface where users can explore buildings by height, location, year, and function. The project was developed as part of the Powercoders bootcamp and serves as a portfolio piece showcasing data scraping, transformation, and interactive visualization skills.
@@ -27,6 +25,7 @@ Built using JavaScript, HTML, and CSS, it features a user-friendly interface whe
   script.js
 /json
   buildings.json
+Architectural-data_github-banner.png
 index.html
 ```
 
